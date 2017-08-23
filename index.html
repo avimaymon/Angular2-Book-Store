@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Herolo Client Side Task By Avi Maymon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!-- 1. Load libraries -->
+  <!-- Polyfill(s) for older browsers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.5.0/shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.8.16/zone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reflect-metadata/0.1.10/Reflect.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.17/system.src.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.0/http.dev.js"></script>
+
+  <!-- 2. Configure SystemJS -->
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function (err) {
+      console.error(err);
+    });
+  </script>
+</head>
+<!-- 3. Display the application -->
+
+<body>
+  <my-app>
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </my-app>
+  <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+  <script>
+    $(window).scroll(function () {
+      if ($(this).scrollTop() >= 50) {
+        $('#return-to-top').fadeIn(200);
+      } else {
+        $('#return-to-top').fadeOut(200);
+      }
+    });
+    $('#return-to-top').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 500);
+    });
+
+    
+    
+  </script>
+
+</html>

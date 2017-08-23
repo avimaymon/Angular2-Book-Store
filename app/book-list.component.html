@@ -1,0 +1,27 @@
+<h2>Our Book List</h2>
+<button type="button" (click)="openAddBook()" class="btn btn-primary btn-lg mdfBtn">Add a new Book</button>
+<add-book-form *ngIf="addBookOpenBool"></add-book-form>
+<ul *ngFor="let book of books">
+    <h3>{{errorMsg}}</h3>
+    <div class="book" (click)="toggleForm(book)">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8 colDetails">
+                    <div class="col" >
+                        <div class="row-sm-4 rowTitle" >
+                            <h3>{{book.title}}</h3>
+                        </div>
+                        <div class="row-sm-4 rowAuthor">
+                            <h3>{{book.author}}</h3>
+                        </div>
+                        <div class="row-sm-4 rowDate">
+                            <h3>{{book.date}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <img class="imageCol" src="{{book.imageUrl}}" onError="this.src = 'https://www.on-queue.com/productImages/No_Image.jpg'" />
+            </div>
+        </div>
+    </div>
+    <book-modify *ngIf="modifyOpen && book.title===selectedTitle" [selectedBookId]=book.id [selectedBook]=book></book-modify>
+</ul>

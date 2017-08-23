@@ -1,0 +1,8 @@
+<div class="form animated slideInUp">
+    <div class="btn-group">
+        <button type="button" (click)="onClick('edit')" class="btn btn-primary btn-lg mdfBtn">Edit</button>
+        <button type="button" (click)="onClick('delete')" class="btn btn-danger btn-lg mdfBtn">Delete</button>
+    </div>
+    <edit-book-form *ngIf="selectedForm=='edit'" [selectedBookId]=selectedBookId [selectedBook]=selectedBook></edit-book-form>
+    <delete-book-form *ngIf="selectedForm=='delete'" [selectedBookId]=selectedBookId></delete-book-form>
+</div>

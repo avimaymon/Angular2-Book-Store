@@ -1,0 +1,57 @@
+<div class="addform1 jumbotron text-center animated zoomIn">
+    <div class="container">
+        <h2>Add A Book</h2>
+        <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" #refTitle class="form-control" name="title" formControlName="title">
+                <div *ngIf="addForm.controls['title'].hasError('required') && refTitle.ng-dirty" class="alert alert-danger ">
+                    Please enter a title
+                </div>
+                <div *ngIf="addForm.controls['title'].hasError('minlength')" class="alert alert-danger ">
+                    Please enter a name at least 2 letters
+                </div>
+                <div *ngIf="addForm.controls['title'].hasError('maxlength')" class="alert alert-danger ">
+                    Please enter a name max 40 letters
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Author</label>
+                <input type="text" #refAuthor class="form-control" name="author" formControlName="author">
+                <div *ngIf="addForm.controls['author'].hasError('required') && refAuthor.ng-dirty" class="alert alert-danger ">
+                    Please enter a title
+                </div>
+                <div *ngIf="addForm.controls['author'].hasError('minlength')" class="alert alert-danger ">
+                    Please enter a name at least 5 letters
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Date</label>
+                <input type="number" #refDate class="form-control" name="date" formControlName="date" max="2017">
+                <div *ngIf="addForm.controls['date'].hasError('required') && refDate.ng-dirty" class="alert alert-danger ">
+                    Please enter a date
+                </div>
+                <div *ngIf="(addForm.controls['date'].hasError('minlength') || addForm.controls['date'].hasError('maxlength')) && !addForm.controls['date'].hasError('pattern')"
+                    class="alert alert-danger ">
+                    Please enter a 4 digit date
+                </div>
+                <div *ngIf="addForm.controls['date'].hasError('pattern')" class="alert alert-danger ">
+                    Please use numbers only
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Link for image</label>
+                <input type="text" #refImage class="form-control" name="imageUrl" formControlName="imageUrl">
+                <div *ngIf="addForm.controls['imageUrl'].hasError('required') && refImage.ng-dirty" class="alert alert-danger ">
+                    Please enter an image url
+                </div>
+                <div *ngIf="addForm.controls['imageUrl'].hasError('pattern')" class="alert alert-danger ">
+                    Please use a url starting with http:// or https://
+                </div>
+            </div>
+            <button type="submit" [disabled]="!addForm.valid" class="btn btn-primary">Submit</button>
+            <p class="alertText">{{errorMsg}}</p>
+            <p class="successText">{{successMsg}}</p>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+/* Master Styles */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  
+  background: url("http://api.thumbr.it/whitenoise-361x370.png?background=85b4c7ff&noise=626262&density=15&opacity=15");
+  min-width: 350px;
+  
+}
+
+.booklistbg
+{
+  background:url("http://api.thumbr.it/whitenoise-361x370.png?background=dce1e3ff&noise=1cdbdb&density=58&opacity=18");
+  border-radius : 20px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.book
+{
+ background-color: rgba(0,0,10,0.2) ;
+ border-radius : 10px;
+
+}
+.book:hover 
+{
+background-color: rgba(20,50,250,0.5);
+}
+
+.form
+{
+ background-color: rgba(0,120,150,0.2) ;
+ border-radius : 10px;
+ 
+}
+.colDetails
+{
+  background-color:grey;height:300px;min-width:200px;border-radius:10px;
+}
+.rowTitle
+{
+ background-color: rgba(153,204,152550,0.7) ;
+ border-radius : 10px;
+ height:50px;
+ 
+
+}
+.rowAuthor
+{
+ background-color: rgba(204,229,255,0.7) ;
+ border-radius : 10px;
+height:50px;
+}
+.rowDate
+{
+ background-color: rgba(100,154,255,0.5) ;
+ border-radius : 10px;
+height:50px;
+}
+
+.imageDiv {
+    overflow: hidden;
+    position: relative;
+    width:50px;
+}
+  .imageCol {
+    height:300px;
+    width : 200px;
+    border-radius: 10px;
+  }
+  .mdfBtn
+  {
+    margin:18px;
+  }
+  .addform1
+  {
+    background-color: rgba(0,192,0,0.3);
+  }
+  .editform1
+  {
+    background-color: rgba(0,0,192,0.3);
+  }
+  .deleteform
+  {
+    background-color: rgba(192,0,0,0.6);
+  }
+  .confirmDelete
+  {
+    width : 300px;
+    height : 100px;
+  }
+  input.ng-invalid { border-left : 5px solid red;}
+  input.ng-valid {border-left : 5px solid green;}
+  input.ng-untouched {border : 0px ;}
+  p.alertText
+  {
+    padding-top : 20px;
+    color:red;
+    font-size : 200%;
+    font-weight : bold;
+  }
+  p.successText
+  {
+    padding-top : 20px;
+    color:BLUE;
+    font-size : 200%;
+    font-weight : bold;
+  }
+.titleDiv
+{
+background: rgba(147,206,222,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(74,166,191,1) 72%, rgba(73,165,191,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(72%, rgba(74,166,191,1)), color-stop(100%, rgba(73,165,191,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(74,166,191,1) 72%, rgba(73,165,191,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(74,166,191,1) 72%, rgba(73,165,191,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(74,166,191,1) 72%, rgba(73,165,191,1) 100%);
+background: radial-gradient(ellipse at center, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(74,166,191,1) 72%, rgba(73,165,191,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
+}
