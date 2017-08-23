@@ -6,8 +6,11 @@
 
 ## First, run the server with the command : 
 ### `json-server --watch db.json`
+#### The server will listen to port `3000`
+#### To visit go to address 127.0.0.1:3000
 
 ## Then, run the client app with the command : 
 ### `npm start`
+#### To visit go to address 127.0.0.1:3001
 
 # Enjoy!
