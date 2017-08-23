@@ -1,6 +1,6 @@
 # Welcome to our Book Store!
 
-## For this application to run you need to clone/download its server app from the following repo:
+## For this application to run properly you need to clone/download its server app from the following repo:
 
 ### https://github.com/avimaymon/JSON-Server-for-Angular2-Book-Store
 
